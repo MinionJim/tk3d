@@ -21,6 +21,16 @@ Optional additional libraries:
 - ctypes - This is used to set the process dpi awareness (if called)
 - open-cv (cv2) - This allows the figure to be animated into a video
 
+## Notes and warnings:
+Please read these before proceeding. There isn't many of them but they are important to note.
+ - Due to subprocessing being used, in a Windows OS, please protect your code like the following:
+    if __name__ == "__main__":
+        <your stuff>
+   If this is not used, multiple instances of your program will be created.
+ - The place geometry manager is not supported.
+ - The master to the canvas is recommended to be either a Tk or Toplevel window.
+   This is because a menu is created by default to help usage of the canvas.
+
 ## Functionality
 Currently, the following methods are available to create objects:
 
@@ -89,12 +99,3 @@ You can use the plot and wireframe functions like the following (where 'c' is th
 To create a 3D canvas, treat it like a tkinter frame (like the following):
     c = Canvas3 (root)
     c.pack (expand = True, fill = "both")
-
-## Notes and warnings:
- - Due to subprocessing being used, in a Windows OS, please protect your code like the following:
-    if __name__ == "__main__":
-        <your stuff>
-   If this is not used, multiple instances of your program will be created.
- - The place geometry manager is not supported.
- - The master to the canvas is recommended to be either a Tk or Toplevel window.
-   This is because a menu is created by default to help usage of the canvas.
