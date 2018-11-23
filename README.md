@@ -85,17 +85,20 @@ Plot a wireframe on the canvas. It takes 3 wireframe arrays containing the x, y 
 ## Examples
 You can use the plot and wireframe functions like the following (where 'c' is the 3D canvas).
 ### Line example:
+
     y = array (-10, 4, 0.1)
     x = sin (y * 2)
     z = cos (y * 2)
     c.plot (x, y, z)
 
 ### Wireframe example:
+
     x, z = wireframe (-3, 3, 0.2, -3, 3, 0.2)
     y = cos (x * 2) + cos (z * 2)
     c.plot_wireframe (x, y, z)
 
 ### Initialisation:
 To create a 3D canvas, treat it like a tkinter frame (like the following):
+
     c = Canvas3 (root)
     c.pack (expand = True, fill = "both")
