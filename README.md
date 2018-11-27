@@ -1,6 +1,6 @@
 # tk3d
 ## Description
-This a library for a 3D Tkinter Canvas (Python 3 only).
+This a library for a 3D Tkinter Canvas.
 
 Inpiration came from matplotlib's 3D functionaloty and I wanted to create something like that which would run on a standard installation without needing to be installed itself.
 
